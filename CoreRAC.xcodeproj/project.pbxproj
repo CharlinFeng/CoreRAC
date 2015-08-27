@@ -105,6 +105,7 @@
 		890BF5521B01B5A800BD9505 /* UITableViewHeaderFooterView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 890BF4F51B01B5A800BD9505 /* UITableViewHeaderFooterView+RACSignalSupport.m */; };
 		890BF5531B01B5A800BD9505 /* UITextField+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 890BF4F71B01B5A800BD9505 /* UITextField+RACSignalSupport.m */; };
 		890BF5541B01B5A800BD9505 /* UITextView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 890BF4F91B01B5A800BD9505 /* UITextView+RACSignalSupport.m */; };
+		8922664B1B8F44EE0083A6D1 /* ReactiveCocoaBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8922664A1B8F44EE0083A6D1 /* ReactiveCocoaBindings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -321,6 +322,7 @@
 		890BF4F71B01B5A800BD9505 /* UITextField+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+RACSignalSupport.m"; sourceTree = "<group>"; };
 		890BF4F81B01B5A800BD9505 /* UITextView+RACSignalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+RACSignalSupport.h"; sourceTree = "<group>"; };
 		890BF4F91B01B5A800BD9505 /* UITextView+RACSignalSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+RACSignalSupport.m"; sourceTree = "<group>"; };
+		8922664A1B8F44EE0083A6D1 /* ReactiveCocoaBindings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveCocoaBindings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,6 +406,7 @@
 		890BF4381B01B5A800BD9505 /* CoreRAC */ = {
 			isa = PBXGroup;
 			children = (
+				8922664A1B8F44EE0083A6D1 /* ReactiveCocoaBindings.swift */,
 				890BF4391B01B5A800BD9505 /* Lib */,
 			);
 			path = CoreRAC;
@@ -812,6 +815,7 @@
 				890BF5461B01B5A800BD9505 /* UICollectionReusableView+RACSignalSupport.m in Sources */,
 				890BF54A1B01B5A800BD9505 /* UIGestureRecognizer+RACSignalSupport.m in Sources */,
 				890BF53C1B01B5A800BD9505 /* RACTestScheduler.m in Sources */,
+				8922664B1B8F44EE0083A6D1 /* ReactiveCocoaBindings.swift in Sources */,
 				890BF5421B01B5A800BD9505 /* UIActionSheet+RACSignalSupport.m in Sources */,
 				890BF5201B01B5A800BD9505 /* RACEvent.m in Sources */,
 				890BF5091B01B5A800BD9505 /* NSObject+RACSelectorSignal.m in Sources */,
@@ -942,10 +946,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CoreRAC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreRAC/CoreRAC/CoreRAC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -954,10 +961,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CoreRAC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoreRAC/CoreRAC/CoreRAC-Bridging-Header.h";
 			};
 			name = Release;
 		};
